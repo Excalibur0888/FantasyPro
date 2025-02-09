@@ -548,14 +548,11 @@ button:hover {
     background-color: #f0f0f0;
 }
 
-.answer {
-    padding: 0 1.5rem 1.5rem;
-    color: #666;
-    line-height: 1.6;
-}
-
 /* Add animation for answer */
 .answer {
+		padding: 0 1.5rem 1.5rem;
+		color: #666;
+		line-height: 1.6;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
@@ -568,10 +565,15 @@ button:hover {
 /* Mobile responsiveness for FAQs */
 @media (max-width: 768px) {
     .categories {
-        flex-direction: column;
-        align-items: stretch;
+        display: grid;
+				grid-template-columns: 1fr 1fr;
+        justify-items: center;
         padding: 0 1rem;
     }
+
+		.faq-section .container {
+			padding: 0 !important;
+		}
 
     .category-btn {
         width: 100%;
@@ -583,9 +585,14 @@ button:hover {
         font-size: 0.9rem;
     }
 
+		.faq-item {
+			padding-bottom: 10px;
+		}
+
     .answer {
         padding: 0 1rem 1rem;
         font-size: 0.9rem;
+				line-height: 1.2;
     }
 }
 
@@ -2227,6 +2234,7 @@ footer {
     }
 
     .highlight-item {
+			flex-direction: column;
         text-align: left;
     }
 
