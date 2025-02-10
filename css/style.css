@@ -996,6 +996,14 @@ footer {
     color: #64b5f6;
 }
 
+.footer-age-verification {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
